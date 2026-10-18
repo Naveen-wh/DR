@@ -1,0 +1,831 @@
+{
+  "collections": {
+    "users": {
+      "description": "Organizational tree nodes representing team members and reporting structures mapped uniquely by their email address.",
+      "fields": {
+        "id": "string",
+        "name": "string",
+        "role": "string",
+        "accessLevel": "string",
+        "email": "string",
+        "teamName": "string",
+        "targetQuota": "number",
+        "reportsTo": "string (optional)",
+        "status": "string (optional)",
+        "requestedAt": "string (optional)"
+      }
+    },
+    "workflows": {
+      "description": "Organizational project pipelines hosting child deal structures.",
+      "fields": {
+        "id": "string",
+        "name": "string",
+        "description": "string",
+        "status": "string",
+        "clientName": "string",
+        "leadsCount": "number"
+      }
+    },
+    "tasks": {
+      "description": "Delegated subtask activities mapped to particular projects and individual users.",
+      "fields": {
+        "id": "string",
+        "title": "string",
+        "description": "string",
+        "dueDate": "string",
+        "priority": "string",
+        "status": "string",
+        "assignedToUserId": "string",
+        "createdByUserId": "string",
+        "projectId": "string",
+        "leadId": "string (optional)"
+      }
+    },
+    "logs": {
+      "description": "A comprehensive, high-integrity audit trail recording all structural updates, creations, and edits.",
+      "fields": {
+        "id": "string",
+        "timestamp": "string",
+        "userId": "string",
+        "userName": "string",
+        "actionType": "string",
+        "targetType": "string",
+        "targetId": "string",
+        "targetName": "string",
+        "details": "string"
+      }
+    },
+    "tabSettings": {
+      "description": "Team-level tab visibility permissions managed by administrators.",
+      "fields": {
+        "id": "string",
+        "teamName": "string",
+        "visibleTabs": "array"
+      }
+    },
+    "clients": {
+      "description": "Client details for Client Management and dropdown integration.",
+      "fields": {
+        "id": "string",
+        "fullName": "string",
+        "companyName": "string",
+        "email": "string",
+        "phone": "string",
+        "gst": "string",
+        "city": "string",
+        "pincode": "string",
+        "address": "string",
+        "createdAt": "string",
+        "teamName": "string (optional)"
+      }
+    },
+    "teams": {
+      "description": "Teams definitions containing team names, descriptions, and creation details.",
+      "fields": {
+        "id": "string",
+        "name": "string",
+        "description": "string (optional)",
+        "createdAt": "string"
+      }
+    },
+    "products": {
+      "description": "Master products list across categories and manufacturers.",
+      "fields": {
+        "id": "string",
+        "name": "string",
+        "category": "string",
+        "group": "string",
+        "manufacturer": "string",
+        "teamName": "string (optional)",
+        "createdAt": "string",
+        "createdByUserId": "string (optional)"
+      }
+    },
+    "import_pis": {
+      "description": "Import Purchase (PI) records created in the Import module.",
+      "fields": {
+        "id": "string",
+        "aolBranchName": "string",
+        "indentor": "string",
+        "piNo": "string",
+        "piDate": "string",
+        "piExRate": "number",
+        "supplierName": "string",
+        "productName": "string",
+        "usdPmt": "number",
+        "purchaseQty": "number",
+        "totalUsd": "number",
+        "totalPurchaseQty": "number (optional)",
+        "grandTotalUsd": "number (optional)",
+        "mfg": "string",
+        "port": "string",
+        "paymentTerms": "string",
+        "entryDate": "string (optional)",
+        "createdAt": "string",
+        "createdByUserId": "string (optional)",
+        "createdByName": "string (optional)"
+      }
+    },
+    "import_lcs": {
+      "description": "Import Letter of Credit (LC) records.",
+      "fields": {
+        "id": "string",
+        "aolBranchName": "string",
+        "piNo": "string",
+        "productName": "string",
+        "supplierName": "string (optional)",
+        "mfg": "string (optional)",
+        "port": "string (optional)",
+        "entryDate": "string (optional)",
+        "lcType": "string",
+        "lcAppSentToBank": "string (optional)",
+        "lcAppSentToBankDate": "string (optional)",
+        "bankName": "string (optional)",
+        "lcBankName": "string (optional)",
+        "lcNoRefNo": "string (optional)",
+        "lcDate": "string (optional)",
+        "lcUsanceAtSight": "string (optional)",
+        "usanceDays": "number (optional)",
+        "lcUsanceDays": "number (optional)",
+        "latestShipmentDate": "string (optional)",
+        "lcLatestShipmentDate": "string (optional)",
+        "lcExpiryDate": "string (optional)",
+        "expiryDate": "string (optional)",
+        "lcOpenExRate": "number (optional)",
+        "openExRate": "number (optional)",
+        "createdAt": "string",
+        "createdByUserId": "string (optional)",
+        "createdByName": "string (optional)"
+      }
+    },
+    "import_etas": {
+      "description": "Import Estimated Time of Arrival (ETA/ETD) records.",
+      "fields": {
+        "id": "string",
+        "aolBranchName": "string",
+        "piNo": "string",
+        "productName": "string",
+        "supplierName": "string (optional)",
+        "mfg": "string (optional)",
+        "port": "string (optional)",
+        "etd": "string",
+        "eta": "string",
+        "remark": "string",
+        "schedules": "array (EtaScheduleItem) (optional)",
+        "entryDate": "string (optional)",
+        "createdAt": "string",
+        "createdByUserId": "string (optional)",
+        "createdByName": "string (optional)"
+      }
+    },
+    "import_boes": {
+      "description": "Import Bill of Entry (BOE) records.",
+      "fields": {
+        "id": "string",
+        "aolBranchName": "string",
+        "piNo": "string",
+        "productName": "string",
+        "supplierName": "string (optional)",
+        "mfg": "string (optional)",
+        "port": "string (optional)",
+        "usdPmt": "number (optional)",
+        "purchaseQty": "number (optional)",
+        "totalUsd": "number (optional)",
+        "fobCif": "string",
+        "freightUsd": "number",
+        "insuranceUsd": "number",
+        "beNo": "string",
+        "beDate": "string",
+        "boeExRate": "number",
+        "beQuery": "string (optional)",
+        "invoiceNumber": "string",
+        "invoiceDate": "string",
+        "lotBatchNumber": "string",
+        "billOfLadingNo": "string",
+        "billOfLadingDate": "string",
+        "portOfLoading": "string (optional)",
+        "beStatus": "string (optional)",
+        "deferredDuty": "string (optional)",
+        "deferredDutyAmt": "string (optional)",
+        "paymentDueDate": "string (optional)",
+        "stampDutyAmount": "string (optional)",
+        "stampDutyDate": "string (optional)",
+        "statusRemark": "string (optional)",
+        "entryDate": "string (optional)",
+        "createdAt": "string",
+        "createdByUserId": "string (optional)",
+        "createdByName": "string (optional)"
+      }
+    },
+    "import_containers": {
+      "description": "Import Container unloading and IGM records.",
+      "fields": {
+        "id": "string",
+        "aolBranchName": "string",
+        "beNo": "string",
+        "invoiceNumber": "string",
+        "productName": "string",
+        "piNo": "string (optional)",
+        "containerNo": "string",
+        "sizeOfContainer": "string",
+        "containerWiseQty": "number",
+        "remark": "string (optional)",
+        "igmNoDt": "string (optional)",
+        "igmItemNo": "string (optional)",
+        "igmChaSelfJobNo": "string (optional)",
+        "igmFinalInwardDate": "string (optional)",
+        "igmContainerGatedIn": "string (optional)",
+        "igmCfsLastDate": "string (optional)",
+        "igmMaterialMovedOutOfCfs": "string (optional)",
+        "igmFreeEmptyCtnrDetentionLastDt": "string (optional)",
+        "igmStatusRemark": "string (optional)",
+        "igmDuty": "boolean (optional)",
+        "igmShpLine": "boolean (optional)",
+        "igmStampDuty": "boolean (optional)",
+        "igmDo": "boolean (optional)",
+        "igmCfs": "boolean (optional)",
+        "igmOocStatus": "boolean (optional)",
+        "entryDate": "string (optional)",
+        "createdAt": "string",
+        "createdByUserId": "string (optional)",
+        "createdByName": "string (optional)"
+      }
+    },
+    "import_cis": {
+      "description": "Import Custom Inward (CI) records.",
+      "fields": {
+        "id": "string",
+        "aolBranchName": "string",
+        "aolGodown": "string",
+        "beNo": "string",
+        "productName": "string",
+        "containerNo": "string",
+        "supplierName": "string",
+        "containerWiseQty": "number",
+        "beDate": "string",
+        "invoiceNumber": "string",
+        "invoiceDate": "string",
+        "purchaseQty": "number",
+        "totalUsd": "number",
+        "beExRate": "number",
+        "containerWiseUsd": "number",
+        "customDuty": "number",
+        "meisLicenceAmt": "number",
+        "penaltyAmount": "number",
+        "purchaseTallyDate": "string",
+        "totalCif": "number",
+        "totalDutyPaidAmt": "number",
+        "totalProductCost": "number",
+        "purchaseRate": "number",
+        "purchaseImport": "string",
+        "entryDate": "string (optional)",
+        "createdAt": "string",
+        "createdByUserId": "string (optional)",
+        "createdByName": "string (optional)"
+      }
+    },
+    "import_drcs": {
+      "description": "Import DRC Bank Charge and Remittance records.",
+      "fields": {
+        "id": "string",
+        "aolBranchName": "string",
+        "piNo": "string",
+        "productName": "string",
+        "supplierName": "string",
+        "purchaseQty": "number",
+        "totalUsd": "number",
+        "pendingUsd": "number (optional)",
+        "lcType": "string",
+        "lcOpenBank": "string (optional)",
+        "lcNo": "string (optional)",
+        "adviceNoRefNo": "string (optional)",
+        "tallyDate": "string",
+        "bankName": "string",
+        "usdPayment": "number",
+        "bankChargesType": "string",
+        "banksCharges1": "string",
+        "charges1": "number",
+        "banksCharges2": "string",
+        "charges2": "number",
+        "description": "string (optional)",
+        "entryDate": "string (optional)",
+        "createdAt": "string",
+        "createdByUserId": "string (optional)",
+        "createdByName": "string (optional)"
+      }
+    },
+    "domestic_pds": {
+      "description": "Domestic Purchase Details (PD) records.",
+      "fields": {
+        "id": "string",
+        "aolBranchName": "string",
+        "aolGodown": "string",
+        "supplierName": "string",
+        "billToPartyName": "string",
+        "shipToPartyName": "string",
+        "originalPurchaseBillNo": "string",
+        "originalInvoiceDate": "string",
+        "productName": "string",
+        "tankerOrVehicleNo": "string",
+        "purchaseQty": "number",
+        "rate": "number",
+        "amount": "number",
+        "freightInBill": "number",
+        "totalPurchaseCost": "number",
+        "purchaseRate": "number",
+        "purchaseDomestic": "string",
+        "purchaseBillNo": "string",
+        "entryDate": "string",
+        "createdAt": "string",
+        "createdByUserId": "string (optional)",
+        "createdByName": "string (optional)"
+      }
+    },
+    "domestic_tptds": {
+      "description": "TPT-D sub-tab records in Domestic module.",
+      "fields": {
+        "id": "string",
+        "aolBranchName": "string",
+        "productName": "string",
+        "purchaseBillNo": "string",
+        "containerOrVehicleNo": "string",
+        "tallyDate": "string",
+        "invoiceOrReferenceNo": "string",
+        "category": "string",
+        "amount": "number",
+        "description": "string",
+        "entryDate": "string",
+        "createdAt": "string",
+        "createdByUserId": "string (optional)",
+        "createdByName": "string (optional)"
+      }
+    },
+    "import_tptis": {
+      "description": "TPT-I sub-tab records in Import module.",
+      "fields": {
+        "id": "string",
+        "aolBranchName": "string",
+        "beNo": "string",
+        "productName": "string",
+        "supplierName": "string",
+        "purchaseQty": "number",
+        "tallyDate": "string",
+        "invoiceOrReferenceNo": "string",
+        "category": "string",
+        "amount": "number",
+        "description": "string (optional)",
+        "createdAt": "string",
+        "createdByUserId": "string (optional)",
+        "createdByName": "string (optional)"
+      }
+    },
+    "import_clearings": {
+      "description": "Clearing entry records in Import module.",
+      "fields": {
+        "id": "string",
+        "aolBranchName": "string",
+        "beNo": "string",
+        "productName": "string",
+        "chaCfsShipping": "string",
+        "name": "string",
+        "docType": "string (optional)",
+        "invoiceNo": "string",
+        "invoiceDate": "string",
+        "tallyDate": "string",
+        "charges": "number",
+        "chargesEffect": "number (optional)",
+        "remark": "string (optional)",
+        "entryDate": "string (optional)",
+        "provisionAmount": "number (optional)",
+        "provisionalMappingId": "string (optional)",
+        "isProvisional": "boolean (optional)",
+        "createdAt": "string",
+        "createdByUserId": "string (optional)",
+        "createdByName": "string (optional)"
+      }
+    },
+    "pids": {
+      "description": "Central Purchase Invoice Details (PID) consolidated table automatically updated on Import CI and Domestic PD modifications.",
+      "fields": {
+        "id": "string",
+        "date": "string",
+        "aolBranchName": "string",
+        "aolGodown": "string",
+        "supplierName": "string",
+        "purchaseBeOrNo": "string",
+        "beOrPurchaseDate": "string",
+        "productName": "string",
+        "containerNo": "string",
+        "purchaseQty": "number",
+        "purchaseRate": "number",
+        "type": "string",
+        "transferredBeNo": "string (optional)",
+        "stockTransfer": "number (optional)",
+        "salesQty": "number (optional)",
+        "purchaseDebitCreditQty": "number (optional)",
+        "salesDebitCreditQty": "number (optional)",
+        "drumCost": "number (optional)",
+        "purchaseRateAfterDruming": "number (optional)",
+        "closingStock": "number (optional)",
+        "originCode": "string (optional)",
+        "createdAt": "string",
+        "createdByUserId": "string (optional)",
+        "createdByName": "string (optional)"
+      }
+    },
+    "accounts_sts": {
+      "description": "Stock Transfer (ST) transaction records between Godowns tracked under Accounts.",
+      "fields": {
+        "id": "string",
+        "createdAt": "string",
+        "createdByUserId": "string (optional)",
+        "createdByName": "string (optional)",
+        "entryDate": "string",
+        "sourceAolGodown": "string",
+        "sourceAolBranchName": "string",
+        "sourceSupplierName": "string",
+        "sourceProductName": "string",
+        "sourceBePurchaseBillNo": "string",
+        "sourceContainerNo": "string",
+        "sourceOriginCode": "string",
+        "sourcePidId": "string (optional)",
+        "sourcePurchaseRate": "number",
+        "sourceClosingStock": "number",
+        "qty": "number",
+        "rate": "number",
+        "invoiceOrTallyDate": "string",
+        "destAolGodown": "string",
+        "destAolBranchName": "string",
+        "stockJvOrNewInvoiceNo": "string",
+        "newProductName": "string",
+        "importOrDomestic": "string",
+        "freightProvision": "number",
+        "provisionLoadingUnloading": "number",
+        "taxableValue": "number",
+        "gp": "number"
+      }
+    },
+    "opening_stocks": {
+      "description": "Opening Stock records in Accounts.",
+      "fields": {
+        "id": "string",
+        "aolBranchName": "string",
+        "aolGodown": "string",
+        "supplierName": "string",
+        "beNoOrPurchaseNo": "string",
+        "beOrPurchaseDate": "string",
+        "productName": "string",
+        "containerNo": "string",
+        "openingQty": "number",
+        "purchaseRate": "number",
+        "importOrDomestic": "string",
+        "originCode": "string",
+        "createdAt": "string",
+        "createdByUserId": "string (optional)",
+        "createdByName": "string (optional)"
+      }
+    },
+    "accounts_sales": {
+      "description": "Sales records tracked under Accounts.",
+      "fields": {
+        "id": "string",
+        "createdAt": "string",
+        "createdByUserId": "string (optional)",
+        "createdByName": "string (optional)",
+        "entryDate": "string",
+        "aolGodown": "string",
+        "aolBranchName": "string",
+        "sourcePidId": "string",
+        "pidKeyDisplay": "string",
+        "spName": "string",
+        "spUserId": "string (optional)",
+        "partyName": "string",
+        "saleInvoiceNo": "string",
+        "invoiceDate": "string",
+        "productName": "string",
+        "salesQty": "number",
+        "rate": "number",
+        "taxableValue": "number",
+        "gp": "number (optional)",
+        "beNoOrPurchaseNo": "string",
+        "containerNo": "string",
+        "purRate": "number",
+        "originCode": "string",
+        "freightProvision": "number",
+        "provisionLoadingUnloading": "number",
+        "freightInBill": "number"
+      }
+    },
+    "accounts_drumings": {
+      "description": "Drumming expenses and costs tracked under Accounts.",
+      "fields": {
+        "id": "string",
+        "createdAt": "string",
+        "createdByUserId": "string (optional)",
+        "createdByName": "string (optional)",
+        "entryDate": "string",
+        "tallyDate": "string",
+        "aolGodown": "string",
+        "productName": "string",
+        "containerNo": "string",
+        "numberOfDrumsBags": "number",
+        "totalDrumCost": "number",
+        "sourcePidId": "string (optional)",
+        "beNoOrPurchaseNo": "string (optional)",
+        "supplierName": "string (optional)",
+        "aolBranchName": "string (optional)",
+        "originCode": "string (optional)"
+      }
+    },
+    "expense_ledgers": {
+      "description": "Expense Ledger heads master.",
+      "fields": {
+        "id": "string",
+        "createdAt": "string",
+        "createdByUserId": "string (optional)",
+        "createdByName": "string (optional)",
+        "expenseSubHead": "string",
+        "expenseHead": "string",
+        "directIndirect": "string",
+        "ledgerBranchLocation": "string",
+        "expenseIncomeType": "string",
+        "ecomExpense": "string"
+      }
+    },
+    "accounts_office_exps": {
+      "description": "Office Expenses entries in Accounts.",
+      "fields": {
+        "id": "string",
+        "createdAt": "string",
+        "createdByUserId": "string (optional)",
+        "createdByName": "string (optional)",
+        "entryDate": "string",
+        "aolBranchName": "string",
+        "vendorPartyName": "string",
+        "purchaseInvoiceNo": "string",
+        "invoiceDate": "string",
+        "tallyEntryDate": "string",
+        "amount": "number",
+        "description": "string",
+        "expenseSubHead": "string",
+        "expenseIncomeType": "string",
+        "totalAmount": "number"
+      }
+    },
+    "accounts_meiss": {
+      "description": "MEIS / RoDTEP records in Accounts.",
+      "fields": {
+        "id": "string",
+        "createdAt": "string",
+        "createdByUserId": "string (optional)",
+        "createdByName": "string (optional)",
+        "entryDate": "string",
+        "tallyDate": "string",
+        "aolBranchName": "string",
+        "meisLicenceCost": "number",
+        "licenceNumbers": "string",
+        "meisLicenceAmount": "number",
+        "beNumber": "string",
+        "profit": "number",
+        "description": "string"
+      }
+    },
+    "other_income_ledgers": {
+      "description": "Other Income Ledger heads master.",
+      "fields": {
+        "id": "string",
+        "createdAt": "string",
+        "createdByUserId": "string (optional)",
+        "createdByName": "string (optional)",
+        "ledger": "string",
+        "effect": "string"
+      }
+    },
+    "accounts_other_incomes": {
+      "description": "Other Income entries in Accounts.",
+      "fields": {
+        "id": "string",
+        "createdAt": "string",
+        "createdByUserId": "string (optional)",
+        "createdByName": "string (optional)",
+        "entryDate": "string",
+        "aolBranchName": "string",
+        "tallyDate": "string",
+        "partyName": "string",
+        "ledger": "string",
+        "amount": "number",
+        "description": "string",
+        "effect": "string",
+        "finalAmount": "number"
+      }
+    },
+    "accounts_fdrs": {
+      "description": "Fixed Deposit Receipts (FDR) records in Accounts.",
+      "fields": {
+        "id": "string",
+        "createdAt": "string",
+        "createdByUserId": "string (optional)",
+        "createdByName": "string (optional)",
+        "entryDate": "string",
+        "aolBranchName": "string",
+        "bankName": "string",
+        "tallyDate": "string",
+        "interestAmt": "number",
+        "fdrNo": "string",
+        "description": "string (optional)"
+      }
+    },
+    "accounts_csd_isds": {
+      "description": "CSD & ISD records in Accounts.",
+      "fields": {
+        "id": "string",
+        "createdAt": "string",
+        "createdByUserId": "string (optional)",
+        "createdByName": "string (optional)",
+        "entryDate": "string",
+        "aolBranchName": "string",
+        "type": "string",
+        "tallyDate": "string",
+        "invoiceNo": "string",
+        "taxableValue": "number",
+        "narration": "string (optional)",
+        "effectAmount": "number"
+      }
+    },
+    "accounts_tpt_ss": {
+      "description": "TPT-S records in Accounts.",
+      "fields": {
+        "id": "string",
+        "createdAt": "string",
+        "createdByUserId": "string (optional)",
+        "createdByName": "string (optional)",
+        "entryDate": "string",
+        "aolBranchName": "string",
+        "tallyDate": "string",
+        "transporterName": "string",
+        "saleInvoiceNo": "string",
+        "category": "string",
+        "actualAmount": "number",
+        "provisionAmount": "number (optional)",
+        "description": "string (optional)",
+        "effectiveFreight": "number"
+      }
+    },
+    "accounts_tpt_sts": {
+      "description": "TPT-ST records in Accounts.",
+      "fields": {
+        "id": "string",
+        "createdAt": "string",
+        "createdByUserId": "string (optional)",
+        "createdByName": "string (optional)",
+        "entryDate": "string",
+        "aolBranchName": "string",
+        "tallyDate": "string",
+        "transporterName": "string",
+        "stockJvOrNewInvoiceNo": "string",
+        "category": "string",
+        "actualAmount": "number",
+        "provisionAmount": "number (optional)",
+        "description": "string (optional)",
+        "effectiveFreight": "number"
+      }
+    },
+    "accounts_supplier_cr_dr": {
+      "description": "Supplier Credit/Debit Note records tracked under Accounts.",
+      "fields": {
+        "id": "string",
+        "createdAt": "string",
+        "createdByUserId": "string (optional)",
+        "createdByName": "string (optional)",
+        "entryDate": "string",
+        "aolBranchName": "string",
+        "aolGodown": "string",
+        "tallyDate": "string",
+        "noteOn": "string",
+        "noteType": "string",
+        "partyName": "string",
+        "noteNo": "string",
+        "productName": "string",
+        "bePurchaseBillNo": "string",
+        "tankerVehicleNo": "string",
+        "pidId": "string (optional)",
+        "ledgerSelection": "string",
+        "qty": "number",
+        "rate": "number",
+        "amount": "number",
+        "dateFrom": "string (optional)",
+        "dateTo": "string (optional)",
+        "description": "string (optional)",
+        "autoQty": "number",
+        "autoAmount": "number",
+        "purRateEffectedAmount": "number"
+      }
+    },
+    "accounts_customer_cr_dr": {
+      "description": "Customer Credit/Debit Note records tracked under Accounts.",
+      "fields": {
+        "id": "string",
+        "createdAt": "string",
+        "createdByUserId": "string (optional)",
+        "createdByName": "string (optional)",
+        "entryDate": "string",
+        "aolBranchName": "string",
+        "aolGodown": "string",
+        "tallyDate": "string",
+        "noteOn": "string",
+        "noteType": "string",
+        "partyName": "string",
+        "noteNo": "string",
+        "saleInvoiceNo": "string",
+        "productName": "string",
+        "bePurchaseBillNo": "string",
+        "tankerVehicleNo": "string",
+        "salesId": "string (optional)",
+        "ledgerSelection": "string",
+        "qty": "number",
+        "rate": "number",
+        "amount": "number",
+        "dateFrom": "string (optional)",
+        "dateTo": "string (optional)",
+        "description": "string (optional)",
+        "autoQty": "number",
+        "autoAmount": "number",
+        "purRateEffectedAmount": "number"
+      }
+    },
+    "aol_branches": {
+      "description": "AOL Branch master list.",
+      "fields": {
+        "id": "string",
+        "name": "string",
+        "createdAt": "string"
+      }
+    },
+    "aol_godowns": {
+      "description": "AOL Godown master list.",
+      "fields": {
+        "id": "string",
+        "name": "string",
+        "branchName": "string (optional)",
+        "description": "string (optional)",
+        "createdAt": "string"
+      }
+    },
+    "suppliers": {
+      "description": "Supplier master list.",
+      "fields": {
+        "id": "string",
+        "name": "string",
+        "createdAt": "string"
+      }
+    },
+    "ship_to_parties": {
+      "description": "Ship To Party master list.",
+      "fields": {
+        "id": "string",
+        "name": "string",
+        "createdAt": "string"
+      }
+    },
+    "clearing_cats": {
+      "description": "Clearing Categories / CHA / CFS master list.",
+      "fields": {
+        "id": "string",
+        "name": "string",
+        "createdAt": "string"
+      }
+    },
+    "tptd_categories": {
+      "description": "TPT-D Categories master list.",
+      "fields": {
+        "id": "string",
+        "name": "string",
+        "createdAt": "string"
+      }
+    },
+    "drc_bank_charges_types": {
+      "description": "DRC Bank Charges Types master list.",
+      "fields": {
+        "id": "string",
+        "name": "string",
+        "createdAt": "string"
+      }
+    },
+    "drc_bank_charges1s": {
+      "description": "DRC Bank Charges Head 1 master list.",
+      "fields": {
+        "id": "string",
+        "name": "string",
+        "createdAt": "string"
+      }
+    },
+    "ledger_cr_dr_categories": {
+      "description": "Ledger Cr/Dr Categories master list.",
+      "fields": {
+        "id": "string",
+        "name": "string",
+        "createdAt": "string"
+      }
+    }
+  }
+}
