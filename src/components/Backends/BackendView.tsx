@@ -4,7 +4,7 @@
  */
 
 import React, { useState, useMemo } from "react";
-import { User, Role, ImportCiRecord, DomesticPdRecord, PidRecord, AccountsStRecord, OpeningStockRecord } from "../types";
+import { User, Role, ImportCiRecord, DomesticPdRecord, PidRecord, AccountsStRecord, OpeningStockRecord } from "../../types";
 import { 
   Search, Save, Check, Server, Download, ShieldCheck, HelpCircle, ArrowUpDown, 
   Layers, Plus, Upload, FileSpreadsheet, Trash2, Edit, X, Link, FileText, RefreshCw, AlertCircle, Database 

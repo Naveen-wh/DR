@@ -6,7 +6,7 @@
 import React, { useState, useMemo, useEffect } from "react";
 import { ImportEtaRecord, EtaScheduleItem, ImportPiRecord, User, AolBranchName, SupplierName, Product, Role } from "../../../types";
 import { Plus, Search, Trash2, Edit, Calendar, Clock, Eye, EyeOff, Building2, Layers, Check, X, MessageSquare, History, ArrowRight, FileSpreadsheet } from "lucide-react";
-import AppsScriptSyncBanner, { useAppsScriptSync } from "../../AppsScriptSyncBanner";
+import AppsScriptSyncBanner, { useAppsScriptSync } from "../../Configuration/AppsScriptSyncBanner";
 import ImportEtaBulkImportModal from "../ImportEtaBulkImportModal";
 
 interface ImportEtaSubViewProps {

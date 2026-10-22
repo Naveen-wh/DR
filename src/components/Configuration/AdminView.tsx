@@ -4,7 +4,7 @@
  */
 
 import React, { useState, useEffect } from "react";
-import blueprintJson from "../../firebase-blueprint.json";
+import blueprintJson from "../../../firebase-blueprint.json";
 import {
   MODULE_CONFIGS,
   SyncModuleConfig,
@@ -17,12 +17,12 @@ import {
   fetchViaAppsScript,
   fetchPublicGoogleSheetCsv,
   getBlueprintFieldsForCollection
-} from "../lib/googleSheetsService";
+} from "../../lib/googleSheetsService";
 import {
   bulkSaveGenericCollectionRecords,
   getGoogleSheetsSettings,
   saveGoogleSheetsSettings
-} from "../lib/firebaseService";
+} from "../../lib/firebaseService";
 import {
   ShieldCheck,
   FileSpreadsheet,

@@ -6,7 +6,7 @@
 import React, { useState, useMemo, useEffect } from "react";
 import { ImportLcRecord, ImportPiRecord, User, AolBranchName, SupplierName, Product, Role } from "../../../types";
 import { Plus, Search, Trash2, Edit, FileText, Landmark, Calendar, ShieldAlert, Eye, EyeOff, Building2, Layers, Check, X, FileSpreadsheet } from "lucide-react";
-import AppsScriptSyncBanner, { useAppsScriptSync } from "../../AppsScriptSyncBanner";
+import AppsScriptSyncBanner, { useAppsScriptSync } from "../../Configuration/AppsScriptSyncBanner";
 import ImportLcBulkImportModal from "../ImportLcBulkImportModal";
 
 interface ImportLcSubViewProps {

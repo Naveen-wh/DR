@@ -6,8 +6,8 @@
 import React, { useState, useMemo } from "react";
 import { ImportPiRecord, ImportPiProductItem, User, AolBranchName, SupplierName, Product, Role, ImportLcRecord, ImportEtaRecord } from "../../../types";
 import { Plus, Search, Trash2, Edit, FileText, DollarSign, Layers, Package, X, Check, ShieldAlert, Eye, EyeOff, CheckCircle2, Clock, AlertCircle, RotateCcw, Link2, Copy, ExternalLink, FileSpreadsheet, CheckCircle, RefreshCw, Sliders, Info, ShieldCheck, AlertTriangle, Upload } from "lucide-react";
-import { DateRangeFilterPopup } from "../../DateRangeFilterPopup";
-import AppsScriptSyncBanner, { useAppsScriptSync } from "../../AppsScriptSyncBanner";
+import { DateRangeFilterPopup } from "../../Configuration/DateRangeFilterPopup";
+import AppsScriptSyncBanner, { useAppsScriptSync } from "../../Configuration/AppsScriptSyncBanner";
 import ImportPiBulkImportModal from "../ImportPiBulkImportModal";
 
 interface ImportPiSubViewProps {

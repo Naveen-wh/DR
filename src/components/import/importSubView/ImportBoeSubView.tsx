@@ -6,7 +6,7 @@
 import React, { useState, useMemo, useEffect } from "react";
 import { ImportBoeRecord, ImportPiRecord, ImportContainerRecord, User, AolBranchName, SupplierName, Product, Role, FreightTerm } from "../../../types";
 import { Plus, Search, Trash2, Edit, FileText, Calendar, ShieldAlert, Eye, EyeOff, Building2, Layers, Check, X, Receipt, Calculator, DollarSign, Tag, FileCheck, ArrowUpRight, Container, PackageCheck, Package, FileSpreadsheet } from "lucide-react";
-import AppsScriptSyncBanner, { useAppsScriptSync } from "../../AppsScriptSyncBanner";
+import AppsScriptSyncBanner, { useAppsScriptSync } from "../../Configuration/AppsScriptSyncBanner";
 import ImportBoeBulkImportModal from "../ImportBoeBulkImportModal";
 
 interface ImportBoeSubViewProps {

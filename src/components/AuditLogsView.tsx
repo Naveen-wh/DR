@@ -6,7 +6,7 @@
 import React, { useState } from "react";
 import { ActionLog, User } from "../types";
 import { History, Search, ShieldAlert } from "lucide-react";
-import AppsScriptSyncBanner, { useAppsScriptSync } from "./AppsScriptSyncBanner";
+import AppsScriptSyncBanner, { useAppsScriptSync } from "./Configuration/AppsScriptSyncBanner";
 
 interface AuditLogsViewProps {
   logs: ActionLog[];

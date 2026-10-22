@@ -6,8 +6,8 @@
 import React, { useState } from "react";
 import { User, Client, AolBranchName, Product, AolGodown, PidRecord, AccountsSalesRecord, Role, AccessLevel } from "../../types";
 import { Plus, Search, Eye, Edit2, Trash2, X, ShieldAlert, ShoppingBag, Receipt, Building2, Package, Layers, TrendingUp, DollarSign, AlertCircle, CheckCircle2, RotateCcw, Filter } from "lucide-react";
-import { DateRangeFilterPopup } from "../DateRangeFilterPopup";
-import AppsScriptSyncBanner, { useAppsScriptSync } from "../AppsScriptSyncBanner";
+import { DateRangeFilterPopup } from "../Configuration/DateRangeFilterPopup";
+import AppsScriptSyncBanner, { useAppsScriptSync } from "../Configuration/AppsScriptSyncBanner";
 
 interface AccountsSalesSubViewProps {
   activeUserId: string;

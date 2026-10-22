@@ -82,20 +82,21 @@ import {
 } from "./lib/operationalSheetsService";
 
 // Sub-components
-import ListManagementView from "./components/ListManagementView";
-import ClientsView from "./components/ClientsView";
+import ListManagementView from "./components/List/ListManagementView";
+import ClientsView from "./components/List/ClientsView";
 import AuthScreen from "./components/AuthScreen";
-import PendingApprovalScreen from "./components/PendingApprovalScreen";
-import DashboardView from "./components/DashboardView";
+import PendingApprovalScreen from "./components/Configuration/PendingApprovalScreen";
+import DashboardView from "./components/Dashboard/DashboardView";
 import ImportView from "./components/import/ImportView";
+import PoView from "./components/PurchaseOrder/PoView";
 import DomesticView from "./components/Domestic/DomesticView";
 import AccountsView from "./components/Accounts/AccountsView";
-import ProductsView from "./components/ProductsView";
-import TeamDirectoryView from "./components/TeamDirectoryView";
+import ProductsView from "./components/List/ProductsView";
+import TeamDirectoryView from "./components/List/TeamDirectoryView";
 import AuditLogsView from "./components/AuditLogsView";
-import BackendView from "./components/BackendView";
-import AdminView from "./components/AdminView";
-import { FontSizeToggle } from "./components/FontSizeToggle";
+import BackendView from "./components/Backends/BackendView";
+import AdminView from "./components/Configuration/AdminView";
+import { FontSizeToggle } from "./components/Configuration/FontSizeToggle";
 
 // Lucide Icons
 import {
@@ -120,6 +121,7 @@ import {
   Sun,
   Moon
 } from "lucide-react";
+
 
 export default function App() {
   // Authentication state
@@ -492,16 +494,18 @@ export default function App() {
     (s) => s.teamName.toLowerCase() === activeUser.teamName.toLowerCase()
   );
 
+  // Navbar tabs Setups are here
   const allTabs = [
-    { id: "dashboard", label: "Dashboard", icon: LayoutDashboard },
+    // { id: "dashboard", label: "Dashboard", icon: LayoutDashboard },
+    { id: "po", label: "PO", icon: LayoutDashboard },
     { id: "import_module", label: "Import", icon: Download },
-    { id: "domestic_tab", label: "Domestic", icon: Briefcase },
-    { id: "accounts_tab", label: "Accounts", icon: Landmark },
-    { id: "backend", label: "Backend", icon: Database },
-    { id: "admin", label: "Admin", icon: ShieldCheck },
+    // { id: "domestic_tab", label: "Domestic", icon: Briefcase },
+    // { id: "accounts_tab", label: "Accounts", icon: Landmark },
+    // { id: "backend", label: "Backend", icon: Database },
+    // { id: "admin", label: "Admin", icon: ShieldCheck },
     { id: "list_management", label: "List Management", icon: Folders },
     { id: "team", label: "Hierarchy & Team", icon: Users2 },
-    { id: "logs", label: "Audit Log Trial", icon: FileClock },
+    // { id: "logs", label: "Audit Log Trial", icon: FileClock },
   ];
 
   const allCollectionsData = React.useMemo(() => ({
@@ -3491,6 +3495,13 @@ export default function App() {
               importCis={importCis}
               domesticPds={domesticPds}
               domesticTptds={domesticTptds}
+            />
+          )}
+
+          {activeTab === "po" && (
+            <PoView
+              activeUserId={activeUserId}
+              users={users}
             />
           )}
 

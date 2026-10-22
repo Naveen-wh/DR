@@ -6,7 +6,7 @@
 import React, { useState, useMemo, useEffect } from "react";
 import { ImportContainerRecord, ImportBoeRecord, ImportPiRecord, User, Role } from "../../../types";
 import { Plus, Search, Trash2, Edit, Building2, Eye, EyeOff, Check, X, ShieldAlert, Box, Layers, Receipt, Container, Scale, AlertCircle, FileSpreadsheet, Ship } from "lucide-react";
-import AppsScriptSyncBanner, { useAppsScriptSync } from "../../AppsScriptSyncBanner";
+import AppsScriptSyncBanner, { useAppsScriptSync } from "../../Configuration/AppsScriptSyncBanner";
 import ImportContainerBulkImportModal from "../ImportContainerBulkImportModal";
 
 interface ImportContainerSubViewProps {

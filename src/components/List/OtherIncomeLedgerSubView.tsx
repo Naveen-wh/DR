@@ -4,7 +4,7 @@
  */
 
 import React, { useState } from "react";
-import { OtherIncomeLedgerItem, User, Role, AccessLevel } from "../types";
+import { OtherIncomeLedgerItem, User, Role, AccessLevel } from "../../types";
 import { Plus, Search, Edit2, Trash2, X, ShieldAlert, BookOpen, AlertCircle, ArrowUpRight, ArrowDownRight } from "lucide-react";
 
 interface OtherIncomeLedgerSubViewProps {

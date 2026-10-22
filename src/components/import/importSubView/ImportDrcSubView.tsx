@@ -6,8 +6,8 @@
 import React, { useState, useMemo } from "react";
 import { User, Role, ImportDrcRecord, ImportPiRecord, ImportLcRecord, AolBranchName, SupplierName, PaymentBank, DrcBankChargesType, DrcBankCharges1 } from "../../../types";
 import { Plus, Search, Edit, Trash2, ShieldAlert, X, Eye, Coins, RotateCcw, Calculator, KeyRound } from "lucide-react";
-import { DateRangeFilterPopup } from "../../DateRangeFilterPopup";
-import AppsScriptSyncBanner, { useAppsScriptSync } from "../../AppsScriptSyncBanner";
+import { DateRangeFilterPopup } from "../../Configuration/DateRangeFilterPopup";
+import AppsScriptSyncBanner, { useAppsScriptSync } from "../../Configuration/AppsScriptSyncBanner";
 
 interface ImportDrcSubViewProps {
   activeUserId: string;

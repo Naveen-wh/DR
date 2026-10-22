@@ -35,7 +35,7 @@ import {
   ExternalLink,
   ChevronDown
 } from "lucide-react";
-import AppsScriptSyncBanner, { useAppsScriptSync } from "../../AppsScriptSyncBanner";
+import AppsScriptSyncBanner, { useAppsScriptSync } from "../../Configuration/AppsScriptSyncBanner";
 
 export interface ImportBoeCnSubViewProps {
   activeUserId: string;

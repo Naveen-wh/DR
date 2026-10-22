@@ -6,8 +6,8 @@
 import React, { useState, useMemo, useEffect } from "react";
 import { User, ImportBoeRecord, ImportPiRecord, ImportTptiRecord, TptdCategory, Role } from "../../../types";
 import { Plus, Search, Edit2, Trash2, Eye, X, Check, Calendar, Coins, Filter, ShieldAlert, RotateCcw } from "lucide-react";
-import { DateRangeFilterPopup } from "../../DateRangeFilterPopup";
-import AppsScriptSyncBanner, { useAppsScriptSync } from "../../AppsScriptSyncBanner";
+import { DateRangeFilterPopup } from "../../Configuration/DateRangeFilterPopup";
+import AppsScriptSyncBanner, { useAppsScriptSync } from "../../Configuration/AppsScriptSyncBanner";
 
 interface ImportTptiSubViewProps {
   activeUserId: string;

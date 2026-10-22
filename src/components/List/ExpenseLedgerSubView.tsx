@@ -4,7 +4,7 @@
  */
 
 import React, { useState } from "react";
-import { ExpenseLedgerItem, AolBranchName, User, Role, AccessLevel } from "../types";
+import { ExpenseLedgerItem, AolBranchName, User, Role, AccessLevel } from "../../types";
 import { Plus, Search, Edit2, Trash2, X, ShieldAlert, BookOpen, Layers, MapPin, Tag, CheckCircle2, AlertCircle } from "lucide-react";
 
 interface ExpenseLedgerSubViewProps {

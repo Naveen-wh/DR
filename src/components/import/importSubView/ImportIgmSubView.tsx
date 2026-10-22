@@ -6,7 +6,7 @@
 import React, { useState, useMemo } from "react";
 import { ImportContainerRecord, ImportBoeRecord, User, AolBranchName, Role } from "../../../types";
 import { Search, FileCheck, Building2, Check, Edit, Save, Layers } from "lucide-react";
-import AppsScriptSyncBanner, { useAppsScriptSync } from "../../AppsScriptSyncBanner";
+import AppsScriptSyncBanner, { useAppsScriptSync } from "../../Configuration/AppsScriptSyncBanner";
 
 interface ImportIgmSubViewProps {
   activeUserId: string;

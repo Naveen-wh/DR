@@ -4,7 +4,7 @@
  */
 
 import React, { useState, useEffect } from "react";
-import { User } from "../types";
+import { User } from "../../types";
 import { 
   ShieldAlert, 
   Mail, 

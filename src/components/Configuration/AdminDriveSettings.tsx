@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { getSharedDriveSettings, saveSharedDriveSettings } from "../lib/googleDriveService";
-import { DriveSettings } from "../lib/googleDriveService";
+import { getSharedDriveSettings, saveSharedDriveSettings } from "../../lib/googleDriveService";
+import { DriveSettings } from "../../lib/googleDriveService";
 import { Save, Loader2, Folder } from "lucide-react";
-import { User } from "../types";
-import { saveLog } from "../lib/firebaseService";
+import { User } from "../../types";
+import { saveLog } from "../../lib/firebaseService";
 
 interface AdminDriveSettingsProps {
   onSettingsSaved?: () => void;

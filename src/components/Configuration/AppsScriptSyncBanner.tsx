@@ -9,14 +9,14 @@ import {
   saveAppsScriptConfig,
   subscribeAppsScriptConfig,
   bulkSaveGenericCollectionRecords
-} from "../lib/firebaseService";
+} from "../../lib/firebaseService";
 import {
   syncRecordToAppsScript,
   batchSyncRecordsToAppsScript,
   getUniversalAppsScriptTemplateCode,
   fetchViaAppsScript
-} from "../lib/googleSheetsService";
-import { clearSheetUrlCache } from "../lib/operationalSheetsService";
+} from "../../lib/googleSheetsService";
+import { clearSheetUrlCache } from "../../lib/operationalSheetsService";
 import {
   FileSpreadsheet,
   CheckCircle,
@@ -34,7 +34,7 @@ import {
   CheckCircle2,
   Sparkles
 } from "lucide-react";
-import { User } from "../types";
+import { User } from "../../types";
 
 export interface SyncStatus {
   state: "idle" | "syncing" | "success" | "error";
@@ -73,7 +73,7 @@ export function useAppsScriptSync(
       // Check fallback doc or global settings if no URL specified for this sub-tab
       if (!effectiveUrl && fallbackConfigKey) {
         try {
-          const fallbackConfig = await import("../lib/firebaseService").then((m) =>
+          const fallbackConfig = await import("../../lib/firebaseService").then((m) =>
             m.getAppsScriptConfig(fallbackConfigKey, defaultSheetName)
           );
           if (fallbackConfig?.appsScriptUrl && isMounted) {
@@ -86,7 +86,7 @@ export function useAppsScriptSync(
 
       if (!effectiveUrl) {
         try {
-          const globalConfig = await import("../lib/firebaseService").then((m) =>
+          const globalConfig = await import("../../lib/firebaseService").then((m) =>
             m.getGoogleSheetsSettings()
           );
           if (globalConfig?.appsScriptUrl && isMounted) {

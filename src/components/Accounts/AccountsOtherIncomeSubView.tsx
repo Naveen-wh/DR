@@ -6,8 +6,8 @@
 import React, { useState, useEffect } from "react";
 import { AccountsOtherIncomeRecord, OtherIncomeLedgerItem, AolBranchName, User, Role, AccessLevel } from "../../types";
 import { Plus, Search, Eye, Edit2, Trash2, X, ShieldAlert, DollarSign, Building2, Calendar, FileText, AlertCircle, TrendingUp, TrendingDown, ArrowUpRight, ArrowDownRight, RotateCcw, Filter } from "lucide-react";
-import { DateRangeFilterPopup } from "../DateRangeFilterPopup";
-import AppsScriptSyncBanner, { useAppsScriptSync } from "../AppsScriptSyncBanner";
+import { DateRangeFilterPopup } from "../Configuration/DateRangeFilterPopup";
+import AppsScriptSyncBanner, { useAppsScriptSync } from "../Configuration/AppsScriptSyncBanner";
 
 interface AccountsOtherIncomeSubViewProps {
   activeUserId: string;

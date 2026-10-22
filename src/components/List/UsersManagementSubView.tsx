@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { User, Role, AccessLevel, Team, UserStatus } from "../types";
+import { User, Role, AccessLevel, Team, UserStatus } from "../../types";
 import { 
   Users, 
   Plus, 

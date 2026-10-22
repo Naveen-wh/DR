@@ -4,7 +4,7 @@
  */
 
 import React, { useState, useEffect } from "react";
-import { User, Role, AccessLevel, UserStatus, TeamTabSettings, Team } from "../types";
+import { User, Role, AccessLevel, UserStatus, TeamTabSettings, Team } from "../../types";
 import { 
   Shield, 
   ChevronDown, 
@@ -28,8 +28,8 @@ import {
   ShieldAlert, 
   Lock 
 } from "lucide-react";
-import { getReportingTreeUsers } from "../data";
-import { TABS_CONFIG } from "../constants/tabs";
+import { getReportingTreeUsers } from "../../data";
+import { TABS_CONFIG } from "../../constants/tabs";
 
 interface TeamDirectoryViewProps {
   users: User[];

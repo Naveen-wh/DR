@@ -4,9 +4,9 @@
  */
 
 import React, { useState, useEffect } from "react";
-import { User, Role, Product, Team, ProductCategory, ProductGroup, Manufacturer, AccessLevel } from "../types";
-import { canEditProduct, canDeleteProduct } from "../data";
-import ProductBulkImportModal from "./ProductBulkImportModal";
+import { User, Role, Product, Team, ProductCategory, ProductGroup, Manufacturer, AccessLevel } from "../../types";
+import { canEditProduct, canDeleteProduct } from "../../data";
+import ProductBulkImportModal from "../Configuration/ProductBulkImportModal";
 import {
   Plus,
   Trash2,

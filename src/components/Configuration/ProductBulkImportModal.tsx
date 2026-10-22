@@ -26,7 +26,7 @@ import {
   ShieldAlert,
   Plus
 } from "lucide-react";
-import { Product, ProductCategory, ProductGroup, Manufacturer, Team, User } from "../types";
+import { Product, ProductCategory, ProductGroup, Manufacturer, Team, User } from "../../types";
 
 interface ProductBulkImportModalProps {
   isOpen: boolean;

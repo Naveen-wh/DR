@@ -6,7 +6,7 @@
 import React, { useState, useMemo } from "react";
 import { ImportBoeRecord, ImportPiRecord, User, AolBranchName, Role } from "../../../types";
 import { Search, Receipt, Building2, Edit, Save, ShieldAlert, FileSpreadsheet, Plus } from "lucide-react";
-import AppsScriptSyncBanner, { useAppsScriptSync } from "../../AppsScriptSyncBanner";
+import AppsScriptSyncBanner, { useAppsScriptSync } from "../../Configuration/AppsScriptSyncBanner";
 import ImportBoeBulkImportModal from "../ImportBoeBulkImportModal";
 
 interface ImportDeferredDutySubViewProps {

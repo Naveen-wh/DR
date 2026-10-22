@@ -4,7 +4,7 @@
  */
 
 import React, { useState } from "react";
-import { User, SalesLead, ProjectWorkflow, SalesTask, Client, Team, Role, Product } from "../types";
+import { User, SalesLead, ProjectWorkflow, SalesTask, Client, Team, Role, Product } from "../../types";
 import {
   canEditTask,
   canDeleteTask,
@@ -14,7 +14,7 @@ import {
   canEditClient,
   canDeleteClient,
   getReportingTreeUsers,
-} from "../data";
+} from "../../data";
 import {
   Plus,
   CheckSquare,

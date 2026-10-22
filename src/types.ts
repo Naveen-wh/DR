@@ -570,6 +570,51 @@ export interface ImportBoeRecord {
   createdByName?: string;
 }
 
+
+export interface PoRecord {
+  id: string;
+  createdAt: string; // "Created_at"
+  poDate: string; // "PO Date"
+  poNumber: string; // "PO Number"
+  supplierName: string; // "Supplier Name"
+  supplierGstin: string; // "Supplier GSTIN"
+  supplierAddress: string; // "Supplier Address"
+  createEditDate: string; // "Create/Edit Date"
+  cpName: string; // "CP Name"
+  cpNumber: string; // "CP Number"
+  cpEmailId: string; // "CP Email ID"
+  deliveryLocation: string; // "Delivery Location"
+  billingLocation: string; // "Billing Location"
+  shipToAddress: string; // "Ship To Address"
+  billToAddress: string; // "Bill To Address"
+  shipToGst: string; // "Ship To GST"
+  billToGst: string; // "Bill To GST"
+  preparedBy: string; // "Prepared By"
+  checkedBy: string; // "Checked By"
+  spName: string; // "SP Name"
+  spPhoneNumber: string; // "SP Phone Number"
+  spEmailId: string; // "SP Email Id"
+  paymentTerms: string; // "Payment Terms"
+  deliveryTerms: string; // "Delivery Terms"
+  otherTerms: string; // "Other Terms"
+  currency: string; // "Currency"
+  subTotal: number; // "Sub Total"
+  gst: number; // "GST"
+  totalInNum: number; // "Total (In Num)"
+  totalInWord: string; // "Total (In Word)"
+  productDescription1: string; // "Product Description 1"
+  packingKgs1: string; // "Packing/Kgs 1"
+  packs1: number; // "Packs 1"
+  totalQty1: number; // "Total Qty 1"
+  rate1: number; // "Rate 1"
+  amount1: number; // "Amount 1"
+  createdBy: string; // "Created By"
+  editBy?: string; // "Edit By"
+  editTimestamp?: string; // "Edit Timestamp"
+  createdByUserId?: string;
+}
+
+
 export interface ImportContainerRecord {
   id: string;
   aolBranchName: string;

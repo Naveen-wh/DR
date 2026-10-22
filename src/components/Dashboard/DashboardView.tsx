@@ -30,7 +30,7 @@ import {
   ImportCiRecord,
   DomesticPdRecord,
   DomesticTptdRecord
-} from "../types";
+} from "../../types";
 import { 
   Landmark, 
   ChevronDown, 
@@ -61,8 +61,8 @@ import {
   Layers,
   MapPin
 } from "lucide-react";
-import AdminDriveSettings from "./AdminDriveSettings";
-import { DateRangeFilterPopup } from "./DateRangeFilterPopup";
+import AdminDriveSettings from "../Configuration/AdminDriveSettings";
+import { DateRangeFilterPopup } from "../Configuration/DateRangeFilterPopup";
 
 interface DashboardViewProps {
   activeUserId: string;

@@ -13,7 +13,7 @@ import {
 } from "../firebase";
 import { syncUserProfile } from "../lib/firebaseService";
 import { Shield, Key, Mail, User as UserIcon, Briefcase, Award, Sun, Moon } from "lucide-react";
-import { FontSizeToggle } from "./FontSizeToggle";
+import { FontSizeToggle } from "./Configuration/FontSizeToggle";
 import config from "../../firebase-applet-config.json";
 
 interface AuthScreenProps {
@@ -412,7 +412,7 @@ export default function AuthScreen({ onAuthSuccess, externalError, onClearExtern
           Google Single Sign-On (SSO)
         </button>
 
-        {/* 1-Click Executive Admin Direct Sign In */}
+        {/* 1-Click Executive Admin Direct Sign In
         <div className="pt-2 border-t border-slate-100 space-y-2">
           <span className="text-[10px] font-mono font-bold uppercase text-slate-400 block text-center">
             ⚡ 1-Click Direct Admin Sign In:
@@ -439,8 +439,9 @@ export default function AuthScreen({ onAuthSuccess, externalError, onClearExtern
             </button>
           </div>
         </div>
+        */}
 
-        {/* Toggle Mode Link */}
+        {/* Toggle Mode Link 
         <div className="text-center pt-2">
           <button
             onClick={() => {
@@ -454,6 +455,7 @@ export default function AuthScreen({ onAuthSuccess, externalError, onClearExtern
               : "Register email account"}
           </button>
         </div>
+        */}
 
 
       </div>

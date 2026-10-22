@@ -8,7 +8,7 @@ import { User, SalesLead, ProjectWorkflow, ActionLog, AccessLevel, Role, Client,
 import { canEditLead, canDeleteLead, canViewLead, getReportingTreeUsers } from "../../../data";
 import { Plus, Search, Edit2, Trash2, ShieldAlert, Lock, Unlock, Filter, DollarSign, Calendar, X, Check, HelpCircle, Building2, ChevronDown, ChevronRight, RotateCcw } from "lucide-react";
 import LeadLcDetailsRow from "../../LeadLcDetailsRow";
-import { DateRangeFilterPopup } from "../../DateRangeFilterPopup";
+import { DateRangeFilterPopup } from "../../Configuration/DateRangeFilterPopup";
 
 interface NewProductItem {
   productNameCustom: string;

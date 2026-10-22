@@ -6,8 +6,8 @@
 import React, { useState } from "react";
 import { AccountsFdrRecord, AolBranchName, User, Role, AccessLevel, PaymentBank } from "../../types";
 import { Plus, Search, Eye, Edit2, Trash2, X, ShieldAlert, Landmark, Calendar, DollarSign, AlertCircle, Hash, Building2, RotateCcw, Filter } from "lucide-react";
-import { DateRangeFilterPopup } from "../DateRangeFilterPopup";
-import AppsScriptSyncBanner, { useAppsScriptSync } from "../AppsScriptSyncBanner";
+import { DateRangeFilterPopup } from "../Configuration/DateRangeFilterPopup";
+import AppsScriptSyncBanner, { useAppsScriptSync } from "../Configuration/AppsScriptSyncBanner";
 
 interface AccountsFdrSubViewProps {
   activeUserId: string;
